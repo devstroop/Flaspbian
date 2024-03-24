@@ -77,6 +77,13 @@ If you encounter issues running flutter-pi on any of the supported platforms lis
     </details>
 
 3. Install cmake, graphics, system libraries and fonts:
+    If using other pi's, might have lack of GPG keys
+    ```shell
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0E98404D386FA1D9 6ED0E7B82643E131
+    ```
+    ```shell
+    sudo apt upgrade
+    ```
     ```shell
     sudo apt install cmake libgl1-mesa-dev libgles2-mesa-dev libegl1-mesa-dev libdrm-dev libgbm-dev ttf-mscorefonts-installer fontconfig libsystemd-dev libinput-dev libudev-dev  libxkbcommon-dev
     ```
