@@ -3,12 +3,7 @@ A Super Lightweight Flutter Engine Embedder for Raspbian Linux - Runs w/o Deskto
 
 # Platform and Archtecture
 - CPU Archs: ARMv7, ARMv8, x86 or x86 64bit.
-- HW 3D acceleration for more precise support for kernel-modesetting (KMS) and the direct rendering infrastructure (DRI) 
-
-# Unupported SBCs
-- Pi Zero (only the first one) 
-- Pi 1
-  Both above boards are from 1st gen, issue in HW3DACC/KMS unsupported.
+- 3D Acceleration:  for more precise support for kernel-modesetting (KMS) and the direct rendering infrastructure (DRI) 
 
 # Plugins and Packages
 - flutterpi_tool: https://pub.dev/packages/flutterpi_tool
@@ -18,11 +13,16 @@ A Super Lightweight Flutter Engine Embedder for Raspbian Linux - Runs w/o Deskto
   - See updated [Building flutter-pi on the Raspberry Pi](#-building-flutter-pi-on-the-raspberry-pi) and [Building the App](#building-the-app-new-method-linux-only) sections below.
 - The [gstreamer video player](#gstreamer-video-player) now supports creating players from a raw gstreamer pipeline.
   
-# References
-- Inspired by https://github.com/chinmaygarde/flutter_from_scratch.
+# Unupported SBCs
+- Pi Zero (only the first one) 
+- Pi 1
+  Both above boards are from 1st gen, issue in HW3DACC/KMS unsupported.
 
 # Notes:
 - _The difference between packages and plugins is that packages don't include any native code, they are just pure Dart. Plugins (like the [shared_preferences plugin](https://github.com/flutter/plugins/tree/main/packages/shared_preferences)) include platform-specific code._
+
+# References
+- Inspired by https://github.com/chinmaygarde/flutter_from_scratch.
 
 ## 📑 Contents
 
