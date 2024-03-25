@@ -69,20 +69,17 @@ A Super Lightweight Flutter Engine Embedder for Raspbian Linux - Runs w/o Deskto
     </details>
 
 3. Install cmake, graphics, system libraries and fonts:
-    If using other pi's, might have lack of GPG keys
     ```shell
-    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0E98404D386FA1D9 6ED0E7B82643E131
+    sudo apt install cmake libgl1-mesa-dev libgles2-mesa-dev libegl1-mesa-dev libdrm-dev libgbm-dev ttf-mscorefonts-installer fontconfig libsystemd-dev libinput-dev libudev-dev  libxkbcommon-dev -y
     ```
+    If throws `404 NOT FOUND` error, might have lack of GPG keys
     ```shell
-    sudo apt upgrade
-    ```
-    ```shell
-    sudo apt install cmake libgl1-mesa-dev libgles2-mesa-dev libegl1-mesa-dev libdrm-dev libgbm-dev ttf-mscorefonts-installer fontconfig libsystemd-dev libinput-dev libudev-dev  libxkbcommon-dev
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0E98404D386FA1D9 6ED0E7B82643E131 -y && sudo apt update -y
     ```
 
     If you want to use the [gstreamer video player](#gstreamer-video-player), install these too:
     ```shell
-    sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-plugins-bad1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-alsa
+    sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-plugins-bad1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-alsa -y
     ```
     <details>
       <summary>More Info</summary>
@@ -95,7 +92,7 @@ A Super Lightweight Flutter Engine Embedder for Raspbian Linux - Runs w/o Deskto
       - `gpiod` and `libgpiod-dev` where required in the past, but aren't anymore since the `flutter_gpiod` plugin will directly access the kernel interface.
     </details>
     
-4. Update the system fonts.
+5. Update the system fonts.
     ```bash
     sudo fc-cache
     ```
