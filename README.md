@@ -10,7 +10,6 @@ A Super Lightweight Flutter Engine Embedder for Raspbian Linux - Runs w/o Deskto
   - Currently only supported on linux at the moment.
   - Requires flutter SDK > 3.10.5
   - Engine binaries no longer need to be installed on the target system.
-  - See updated [Building flutter-pi on the Raspberry Pi](#-building-flutter-pi-on-the-raspberry-pi) and [Building the App](#building-the-app-new-method-linux-only) sections below.
 - The [gstreamer video player](#gstreamer-video-player) now supports creating players from a raw gstreamer pipeline.
   
 # Unupported SBCs
