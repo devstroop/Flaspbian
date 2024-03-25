@@ -22,7 +22,8 @@ A Super Lightweight Flutter Engine Embedder for Raspbian Linux - Runs w/o Deskto
 - _The difference between packages and plugins is that packages don't include any native code, they are just pure Dart. Plugins (like the [shared_preferences plugin](https://github.com/flutter/plugins/tree/main/packages/shared_preferences)) include platform-specific code._
 
 # References
-- Inspired by https://github.com/chinmaygarde/flutter_from_scratch.
+- https://github.com/chinmaygarde/flutter_from_scratch.
+- https://github.com/ardera/flutter-pi
 
 ## 📑 Contents
 
