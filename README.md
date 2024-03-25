@@ -1,3 +1,6 @@
+# Flaspbian
+A Flutter Embedded Raspbian Linux - Runs w/o Desktop/X11/LXDE/GNOME
+
 ## 📰 NEWS
 - There's now flutterpi tool to make building the app easier: https://pub.dev/packages/flutterpi_tool
   - Currently only supported on linux at the moment.
