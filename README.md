@@ -1,39 +1,28 @@
 # Flaspbian
-A Flutter Embedded Raspbian Linux - Runs w/o Desktop/X11/LXDE/GNOME
+A Super Lightweight Flutter Engine Embedder for Raspbian Linux - Runs w/o Desktop/X11/LXDE/GNOME
 
-## 📰 NEWS
-- There's now flutterpi tool to make building the app easier: https://pub.dev/packages/flutterpi_tool
+# Platform and Archtecture
+- CPU Archs: ARMv7, ARMv8, x86 or x86 64bit.
+- HW 3D acceleration for more precise support for kernel-modesetting (KMS) and the direct rendering infrastructure (DRI) 
+
+# Unupported SBCs
+- Pi Zero (only the first one) 
+- Pi 1
+  Both above boards are from 1st gen, issue in HW3DACC/KMS unsupported.
+
+# Plugins and Packages
+- flutterpi_tool: https://pub.dev/packages/flutterpi_tool
   - Currently only supported on linux at the moment.
   - Requires flutter SDK > 3.10.5
   - Engine binaries no longer need to be installed on the target system.
   - See updated [Building flutter-pi on the Raspberry Pi](#-building-flutter-pi-on-the-raspberry-pi) and [Building the App](#building-the-app-new-method-linux-only) sections below.
-- Added a section for useful dart packages, See [Useful Dart Packages](#-useful-dart-packages)
-- The new latest flutter gallery commit for flutter 3.10 is `d77920b4ced4a105ad35659fbe3958800d418fb9`
 - The [gstreamer video player](#gstreamer-video-player) now supports creating players from a raw gstreamer pipeline.
-- The deprecated `omxplayer`-based video player has been removed.
+  
+# References
+- Inspired by https://github.com/chinmaygarde/flutter_from_scratch.
 
-# flutter-pi
-A light-weight Flutter Engine Embedder for Raspberry Pi. Inspired by https://github.com/chinmaygarde/flutter_from_scratch.
-Flutter-pi also runs without X11, so you don't need to boot into Raspbian Desktop & have X11 and LXDE load up; just boot into the command-line.
-
-You can now **theoretically** run every flutter app you want using flutter-pi, including apps using packages & plugins, just that you'd have to build the platform side of the plugins you'd like to use yourself.
-
-_The difference between packages and plugins is that packages don't include any native code, they are just pure Dart. Plugins (like the [shared_preferences plugin](https://github.com/flutter/plugins/tree/main/packages/shared_preferences)) include platform-specific code._
-
-## 🖥️ Supported Platforms
-Although flutter-pi is only tested on a Rasberry Pi 4 2GB, it should work fine on other linux platforms, with the following conditions:
-
-- support for hardware 3D acceleration. more precisely support for kernel-modesetting (KMS) and the direct rendering infrastructure (DRI) 
-- CPU architecture is one of ARMv7, ARMv8, x86 or x86 64bit.
-
-This means flutter-pi won't work on a Pi Zero (only the first one) or Pi 1.
-
-Known working boards:
-
-- Pi 2, 3 and 4 (even the 512MB models)
-- Pi Zero 2 (W)
-
-If you encounter issues running flutter-pi on any of the supported platforms listed above, please report them to me and I'll fix them.
+# Notes:
+- _The difference between packages and plugins is that packages don't include any native code, they are just pure Dart. Plugins (like the [shared_preferences plugin](https://github.com/flutter/plugins/tree/main/packages/shared_preferences)) include platform-specific code._
 
 ## 📑 Contents
 
@@ -52,7 +41,7 @@ If you encounter issues running flutter-pi on any of the supported platforms lis
 4. **[Useful Dart Packages](#-useful-dart-packages)**
 5. **[Discord](#-discord)**
 
-## 🛠 Building flutter-pi on the Raspberry Pi
+## 🛠 Building flaspbian on the Raspberry Pi
 - If you want to update flutter-pi, you check out the latest commit using `git pull && git checkout origin/master` and continue with [compiling](#compiling), step 2.
 
 ### Dependencies
