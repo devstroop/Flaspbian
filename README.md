@@ -131,6 +131,12 @@ If you encounter issues running flutter-pi on any of the supported platforms lis
     ```bash
     sudo raspi-config
     ```
+    or,
+    Open orangepi-config:
+    ```bash
+    sudo orangepi-config
+    ```
+    
     
 2. Switch to console mode:
    `System Options -> Boot / Auto Login` and select `Console` or `Console (Autologin)`.
